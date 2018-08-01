@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains demotest.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function demotest_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the demotest module.
+    case 'help.page.demotest':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Module for Drupal 8 Demo Test') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function demotest_theme() {
+  return [
+    'demotest' => [
+      'render element' => 'children',
+    ],
+  ];
+}

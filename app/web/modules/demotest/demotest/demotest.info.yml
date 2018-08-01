@@ -1,0 +1,5 @@
+name: 'DemoTest'
+type: module
+description: 'Module for Drupal 8 Demo Test'
+core: 8.x
+package: 'Demo'
