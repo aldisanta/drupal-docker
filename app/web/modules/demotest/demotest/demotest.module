@@ -33,3 +33,10 @@ function demotest_theme() {
     ],
   ];
 }
+
+/**
+ * Implements hook_theme_registry_alter
+ */
+function demotest_theme_registry_alter(&$theme_registry) {
+  $theme_registry['node']['path'] = drupal_get_path('module', 'demotest') . '/templates';
+}
