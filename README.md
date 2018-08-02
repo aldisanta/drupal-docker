@@ -41,5 +41,5 @@ ADVANCED OPTIONS -> Host: db
 1) Created Custom Content Type with image field on form.
 2) Modified Byline on `By Line` Content Type with `By {author} {author_picture} on {date}`.
 3) Using module to override node template.
-4) not yet completed.
-5) not yet completed.
+4) Programatically Adding Title, Body & Image field.
+5) Styling by line, done with simple css (no sass).

@@ -40,3 +40,10 @@ function demotest_theme() {
 function demotest_theme_registry_alter(&$theme_registry) {
   $theme_registry['node']['path'] = drupal_get_path('module', 'demotest') . '/templates';
 }
+
+/**
+ * Implements hook_heme_registry_alter
+ */
+function demotest_preprocess_node(&$variables){
+  if (isset($variables['node'])) $variables['content_type'] = $variables['node']->getType();
+}

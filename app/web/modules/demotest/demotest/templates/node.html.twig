@@ -10,6 +10,7 @@
   ]
 %}
 {{ attach_library('classy/node') }}
+{{ attach_library('demotest/custom') }}
 <article{{ attributes.addClass(classes) }}>
   <header>
     {{ title_prefix }}
@@ -20,14 +21,32 @@
     {% endif %}
     {{ title_suffix }}
     {% if display_submitted %}
-      <div class="node__meta">
-        <span{{ author_attributes }}>
-          {% trans %}By {{ author_name }}{% endtrans %}
+      {% if content_type == 'by_line' %}
+        <div class="node__meta">
+          <div class="by-line__container-inline">
+            <div class="by-line__items by-line__author">
+              <span{{ author_attributes }}>
+                {% trans %}By {{ author_name }}{% endtrans %}
+              </span>
+            </div>
+            <div class="by-line__items by-line__picture">{{ author_picture }}</div>
+            <div class="by-line__items by-line__date">
+              <span{{ author_attributes }}>
+                {% trans %} on {{ date }}{% endtrans %}
+              </span>
+            </div>
+          </div>
+          {{ metadata }}
+        </div>
+      {% else %}
+        <div class="node__meta">
           {{ author_picture }}
-          {% trans %}on {{ date }}{% endtrans %}
-        </span>
-        {{ metadata }}
-      </div>
+          <span{{ author_attributes }}>
+            {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+          </span>
+          {{ metadata }}
+        </div>
+      {% endif %}
     {% endif %}
   </header>
   <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
