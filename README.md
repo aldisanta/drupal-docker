@@ -21,7 +21,7 @@ docker exec -it {DRUPAL_CONTAINER_NAME} composer install -vvv
 ```
 Database: MariaDB
 Database Name: drupal
-Database username: {MYSQL_DATABASE}
+Database username: root
 Database password: {MYSQL_ROOT_PASSWORD}
 ADVANCED OPTIONS -> Host: db
 ```
