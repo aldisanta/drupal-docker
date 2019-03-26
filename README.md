@@ -12,17 +12,12 @@
 docker-compose up -d --build
 ```
 
-3. On `drupal-docker` run this command to set up development environment\
-```
-docker-compose up -d --build
-```
-
-4. After finished, run command below for drupal install
+3. After finished, run command below for drupal install
 ```
 docker exec -it drupal_docker_drupal bash -c "bash /install/install.sh"
 ```
 
-5. Visit http://localhost:{DRUPAL_PORT} then proceed with installing drupal with following database credentials\
+4. Visit http://localhost:{DRUPAL_PORT} then proceed with installing drupal with following database credentials\
 ```
 Database: MariaDB
 Database Name: drupal
@@ -31,7 +26,7 @@ Database password: {MYSQL_ROOT_PASSWORD}
 ADVANCED OPTIONS -> Host: db
 ```
 
-6. run command below for drupal create module
+5. run command below for drupal create module
 ```
 docker exec -it drupal_docker_drupal bash -c "bash /install/demo.sh"
 ```
