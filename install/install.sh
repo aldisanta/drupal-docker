@@ -4,7 +4,6 @@ composer create-project drupal-composer/drupal-project:8.x-dev /app --stability 
 mkdir -p /app/config/sync && \
 chown -R www-data:www-data /app/web && \
 composer update drupal/core --with-dependencies && \
-composer require drupal/console:~1.0 \
---prefer-dist \
---optimize-autoloader && \
-drush updb
+curl https://drupalconsole.com/installer -L -o drupal.phar && \
+mv drupal.phar /usr/local/bin/drupal && \
+chmod +x /usr/local/bin/drupal
