@@ -17,7 +17,7 @@ docker-compose up -d --build
 docker exec -it {DRUPAL_CONTAINER_NAME} composer install -vvv
 ```
 
-5. Visit http://localhost:{DRUPAL_PORT} then proceed with installing drupal with following database credentials\
+4. Visit http://localhost:{DRUPAL_PORT} then proceed with installing drupal with following database credentials\
 ```
 Database: MariaDB
 Database Name: drupal
