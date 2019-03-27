@@ -1,13 +1,13 @@
 ## Drupal 8 Demo
 
 ### Requirement
-1. Git Installed\
-2. Docker (with Docker-Compose) Installed\
+1. Git Installed
+2. Docker (with Docker-Compose) Installed
 
 ### Installation
-1. Copy `.env.example` -> `.env` to suit your needs\
+1. Copy `.env.example` -> `.env` to suit your needs
 
-2. On `drupal-docker` run this command to set up development environment\
+2. On `drupal-docker` run this command to set up development environment
 ```
 docker-compose up -d --build
 ```
@@ -17,7 +17,7 @@ docker-compose up -d --build
 docker exec -it {DRUPAL_CONTAINER_NAME} bash -c "bash /install/install.sh"
 ```
 
-4. Visit http://localhost:{DRUPAL_PORT} then proceed with installing drupal with following database credentials\
+4. Visit http://localhost:{DRUPAL_PORT} then proceed with installing drupal with following database credentials
 ```
 Database: MariaDB
 Database Name: drupal
