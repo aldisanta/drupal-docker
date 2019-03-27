@@ -14,7 +14,7 @@ docker-compose up -d --build
 
 3. After finished, run command below for drupal install
 ```
-docker exec -it drupal_docker_drupal bash -c "bash /install/install.sh"
+docker exec -it {DRUPAL_CONTAINER_NAME} bash -c "bash /install/install.sh"
 ```
 
 4. Visit http://localhost:{DRUPAL_PORT} then proceed with installing drupal with following database credentials\
